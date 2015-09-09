@@ -16,7 +16,7 @@
 #define ERR_EXIT(info)\
 	do\
 	{\
-		perror(m);\
+		perror(info);\
 		exit(EXIT_FAILURE);\
 	} while(0)
 
@@ -55,7 +55,7 @@ int main(void)
 			ERR_EXIT("getsockname");
 		}
 		printf("ip=%s port=%d\n",inet_ntoa(localaddr.sin_addr),ntohs(localaddr.sin_port));
-		printf("count=%d\n", ++n);
+		printf("count=%d\n", ++count);
 
 	}
 

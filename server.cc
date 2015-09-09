@@ -26,7 +26,7 @@ extern void do_service(int listenfd);
 int main(void)
 {
 	//listening for client
-	int listenfd = socket(AF_INET, SOCK_STREM, 0);
+	int listenfd = socket(AF_INET, SOCK_STREAM, 0);
 	if (listenfd == -1)
 	{
 		ERR_EXIT("socket");
@@ -57,5 +57,5 @@ int main(void)
 	}
 
 	do_service(listenfd);
-	return 0
+	return 0;
 }
